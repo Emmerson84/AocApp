@@ -9,7 +9,7 @@ import { ProcessState } from '../Models/IntCompModels';
     templateUrl: 'aoc2019-daytwo.component.html'
 })
 
-export class Aoc2019DayTwoComponent {
+export class Aoc2019DayTwoComponent implements OnInit {
     title = '--- Day 2: 1202 Program Alarm ---';
     rawPuzzleInput: string;
     answerPartOne = '';

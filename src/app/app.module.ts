@@ -11,13 +11,27 @@ import { FuelCalculationService } from './Aoc2019/Services/FuelCalculationServic
 import { IntComputingService } from './Aoc2019/Services/IntComputingService';
 import { IntProgramService } from './Aoc2019/Services/IntProgramService';
 import { GravityAssistService } from './Aoc2019/Services/GravityAssistService';
+import { AsyncService } from './Aoc2019/Services/AsyncService';
+import { TestComponent } from './Aoc2019/DayThree/aoc2019-daythree.component';
+import { LoaderComponent } from './Aoc2019/Common/aoc-loader.component';
+import { NavBarComponent } from './nav/navbar.component';
+import { YearOverviewComponent } from './aoc-overview/aoc-year-overview.component';
+import { DayThumbnailComponent } from './aoc-overview/aoc-day-thumb.component';
+import { SolutionService } from './Aoc2019/Services/solutions.service';
+import { DayDetailsComponent } from './aoc-overview/aoc-days/aoc-day.component';
 
 
 @NgModule({
   declarations: [
     AocAppComponent,
+    LoaderComponent,
+    NavBarComponent,
+    TestComponent,
     Aoc2019DayOneComponent,
-    Aoc2019DayTwoComponent
+    Aoc2019DayTwoComponent,
+    YearOverviewComponent,
+    DayThumbnailComponent,
+    DayDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,11 +39,13 @@ import { GravityAssistService } from './Aoc2019/Services/GravityAssistService';
     AppRoutingModule
   ],
   providers: [
+    SolutionService,
     PuzzleInputService,
     FuelCalculationService,
     GravityAssistService,
     IntComputingService,
-    IntProgramService],
+    IntProgramService,
+    AsyncService],
   bootstrap: [AocAppComponent]
 })
 export class AppModule { }
